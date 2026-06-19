@@ -1,13 +1,3 @@
 {
-  "itemGroup.odinsdragons": "Example Mod Tab",
-  "block.odinsdragons.example_block": "Example Block",
-  "item.odinsdragons.example_item": "Example Item",
-
-  "odinsdragons.configuration.title": "Odins Dragons Configs",
-  "odinsdragons.configuration.section.odinsdragons.common.toml": "Odins Dragons Configs",
-  "odinsdragons.configuration.section.odinsdragons.common.toml.title": "Odins Dragons Configs",
-  "odinsdragons.configuration.items": "Item List",
-  "odinsdragons.configuration.logDirtBlock": "Log Dirt Block",
-  "odinsdragons.configuration.magicNumberIntroduction": "Magic Number Text",
-  "odinsdragons.configuration.magicNumber": "Magic Number"
+  "item.odinsdragons.book_of_dragons": "Book of Dragons"
 }
