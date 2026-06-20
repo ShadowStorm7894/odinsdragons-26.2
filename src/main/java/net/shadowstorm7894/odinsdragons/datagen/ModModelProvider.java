@@ -5,6 +5,7 @@ import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.renderer.item.ConditionalItemModel;
 import net.minecraft.data.PackOutput;
 import net.neoforged.fml.common.Mod;
 import net.shadowstorm7894.odinsdragons.OdinsDragons;
@@ -19,4 +20,5 @@ public class ModModelProvider extends ModelProvider {
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels){
         itemModels.generateFlatItem(ModItems.BOOKOFDRAGONS.get(), ModelTemplates.FLAT_ITEM);
     }
+
 }
