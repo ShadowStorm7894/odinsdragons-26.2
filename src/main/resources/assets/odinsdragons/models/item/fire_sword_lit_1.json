@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "odinsdragons:item/fire_sword_lit_1"
+  }
+}
