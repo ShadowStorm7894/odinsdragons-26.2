@@ -1,13 +1,7 @@
 {
-  "itemGroup.odinsdragons": "Example Mod Tab",
-  "block.odinsdragons.example_block": "Example Block",
-  "item.odinsdragons.example_item": "Example Item",
+  "item.odinsdragons.book_of_dragons": "Book of Dragons",
+  "item.odinsdragons.fire_sword": "Fire Sword",
 
-  "odinsdragons.configuration.title": "Odins Dragons Configs",
-  "odinsdragons.configuration.section.odinsdragons.common.toml": "Odins Dragons Configs",
-  "odinsdragons.configuration.section.odinsdragons.common.toml.title": "Odins Dragons Configs",
-  "odinsdragons.configuration.items": "Item List",
-  "odinsdragons.configuration.logDirtBlock": "Log Dirt Block",
-  "odinsdragons.configuration.magicNumberIntroduction": "Magic Number Text",
-  "odinsdragons.configuration.magicNumber": "Magic Number"
+  "key.category.odinsdragons.category": "Odin's Dragons",
+  "key.odinsdragons.ignite_sword": "Ignite Sword"
 }
