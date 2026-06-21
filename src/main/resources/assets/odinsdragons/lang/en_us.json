@@ -1,4 +1,7 @@
 {
   "item.odinsdragons.book_of_dragons": "Book of Dragons",
-  "item.odinsdragons.fire_sword": "Fire Sword"
+  "item.odinsdragons.fire_sword": "Fire Sword",
+
+  "key.category.odinsdragons.category": "Odin's Dragons",
+  "key.odinsdragons.ignite_sword": "Ignite Sword"
 }

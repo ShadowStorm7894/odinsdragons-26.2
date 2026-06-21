@@ -1,6 +1,7 @@
 package net.shadowstorm7894.odinsdragons;
 
 import net.minecraft.world.item.*;
+import net.shadowstorm7894.odinsdragons.client.KeymapHandler;
 import net.shadowstorm7894.odinsdragons.item.ModItems;
 
 import net.neoforged.bus.api.IEventBus;

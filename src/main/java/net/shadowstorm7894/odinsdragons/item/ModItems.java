@@ -19,7 +19,8 @@ public class ModItems {
 
     public static final DeferredItem<Item> FIRE_SWORD = ITEMS.register("fire_sword",
             registryname -> new FireSwordItem(new Item.Properties()
-                    .setId(ResourceKey.create(Registries.ITEM, registryname)))
+                    .setId(ResourceKey.create(Registries.ITEM, registryname))
+                    .durability(4800))
     );
 
 
