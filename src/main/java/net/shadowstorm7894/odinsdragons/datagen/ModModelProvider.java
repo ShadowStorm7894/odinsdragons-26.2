@@ -45,6 +45,7 @@ public class ModModelProvider extends ModelProvider {
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels){
         itemModels.generateFlatItem(ModItems.BOOK_OF_DRAGONS.get(), ModelTemplates.FLAT_ITEM);
         generateFireSwordModel(itemModels, ModItems.FIRE_SWORD);
+        itemModels.generateFlatItem(ModItems.WING_SUIT.get(), ModelTemplates.FLAT_ITEM);
 
 
         }

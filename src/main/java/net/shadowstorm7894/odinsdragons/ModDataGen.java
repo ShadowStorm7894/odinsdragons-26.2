@@ -5,6 +5,7 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
+import net.shadowstorm7894.odinsdragons.datagen.ModEquipmentAssetProvider;
 import net.shadowstorm7894.odinsdragons.datagen.ModModelProvider;
 
 @EventBusSubscriber(modid = OdinsDragons.MOD_ID)
@@ -15,5 +16,6 @@ public class ModDataGen {
         PackOutput packOutput = generator.getPackOutput();
 
         generator.addProvider(true, new ModModelProvider(packOutput));
+        generator.addProvider(true, new ModEquipmentAssetProvider(packOutput));
     }
 }
