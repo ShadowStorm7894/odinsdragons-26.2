@@ -28,9 +28,9 @@ import javax.annotation.Nullable;
 @EventBusSubscriber(modid = OdinsDragons.MOD_ID)
 public class FireSwordItem extends Item {
     public FireSwordItem(Properties properties) {
-        super(properties.component(ModDataComponents.LIT_ANI_0, true).component(ModDataComponents.FUEL, 4800));
+        super(properties.component(ModDataComponents.FUEL, 4800));
     }
-    public static int animateOnThisTick = 0;
+    public static int onThisTick = 0;
 
     @Override
     public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
@@ -50,12 +50,11 @@ public class FireSwordItem extends Item {
                 item.remove(ModDataComponents.LIT_STATE);
             }
         }
-        if (animateOnThisTick % 5 == 0) {
-            animateOnThisTick = 0;
+        if (onThisTick % 5 == 0) {
+            onThisTick = 0;
             if (heldItem.is(ModItems.FIRE_SWORD) && Boolean.TRUE.equals(heldItem.get(ModDataComponents.LIT_STATE))) {
                 Integer fuelLeft = heldItem.get(ModDataComponents.FUEL);
                 if (fuelLeft <= 0) {
-                    heldItem.set(ModDataComponents.LIT_ANI_0, true);
                     heldItem.remove(ModDataComponents.LIT_STATE);
                 } else if (fuelLeft == null){
                     System.out.println("fuel is null");
@@ -64,24 +63,10 @@ public class FireSwordItem extends Item {
                     heldItem.set(ModDataComponents.FUEL, fuelLeft);
                     int safeDamgage = Math.min(4800 - fuelLeft, heldItem.getMaxDamage() - 1);
                     heldItem.setDamageValue(safeDamgage);
-
-                    if (Boolean.TRUE.equals(heldItem.get(ModDataComponents.LIT_ANI_0))) {
-                        heldItem.remove(ModDataComponents.LIT_ANI_0);
-                        heldItem.set(ModDataComponents.LIT_ANI_1, true);
-                    } else if (Boolean.TRUE.equals(heldItem.get(ModDataComponents.LIT_ANI_1))) {
-                        heldItem.remove(ModDataComponents.LIT_ANI_1);
-                        heldItem.set(ModDataComponents.LIT_ANI_2, true);
-                    } else if (Boolean.TRUE.equals(heldItem.get(ModDataComponents.LIT_ANI_2))) {
-                        heldItem.remove(ModDataComponents.LIT_ANI_2);
-                        heldItem.set(ModDataComponents.LIT_ANI_3, true);
-                    } else if (Boolean.TRUE.equals(heldItem.get(ModDataComponents.LIT_ANI_3))) {
-                        heldItem.remove(ModDataComponents.LIT_ANI_3);
-                        heldItem.set(ModDataComponents.LIT_ANI_0, true);
-                    }
                 }
             }
         }
-        animateOnThisTick += 1;
+        onThisTick += 1;
     }
 
     @SubscribeEvent

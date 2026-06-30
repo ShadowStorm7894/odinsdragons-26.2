@@ -28,17 +28,10 @@ public class ModModelProvider extends ModelProvider {
 
    public void generateFireSwordModel(ItemModelGenerators itemModel, DeferredItem<Item> item) {
         ItemModel.Unbaked unLitsword = ItemModelUtils.plainModel(itemModel.createFlatItemModel(item.get(), "",ModelTemplates.FLAT_ITEM));
-        ItemModel.Unbaked litSword0 = ItemModelUtils.plainModel(itemModel.createFlatItemModel(item.get(), "_lit_0", ModelTemplates.FLAT_ITEM));
-        ItemModel.Unbaked litSword1 = ItemModelUtils.plainModel(itemModel.createFlatItemModel(item.get(), "_lit_1", ModelTemplates.FLAT_ITEM));
-        ItemModel.Unbaked litSword2 = ItemModelUtils.plainModel(itemModel.createFlatItemModel(item.get(), "_lit_2", ModelTemplates.FLAT_ITEM));
-        ItemModel.Unbaked litSword3 = ItemModelUtils.plainModel(itemModel.createFlatItemModel(item.get(), "_lit_3", ModelTemplates.FLAT_ITEM));
+        ItemModel.Unbaked litSword = ItemModelUtils.plainModel(itemModel.createFlatItemModel(item.get(), "_lit", ModelTemplates.FLAT_ITEM));
         itemModel.itemModelOutput.accept(
-                item.get(), ItemModelUtils.conditional(ItemModelUtils.hasComponent(ModDataComponents.LIT_STATE.get()),
-                        ItemModelUtils.conditional(ItemModelUtils.hasComponent(ModDataComponents.LIT_ANI_0.get()), litSword0,
-                                ItemModelUtils.conditional(ItemModelUtils.hasComponent(ModDataComponents.LIT_ANI_1.get()), litSword1,
-                                        ItemModelUtils.conditional(ItemModelUtils.hasComponent(ModDataComponents.LIT_ANI_2.get()), litSword2,
-                                                ItemModelUtils.conditional(ItemModelUtils.hasComponent(ModDataComponents.LIT_ANI_3.get()), litSword3, unLitsword)))),
-                        unLitsword));
+                item.get(),
+                ItemModelUtils.conditional(ItemModelUtils.hasComponent(ModDataComponents.LIT_STATE.get()), litSword, unLitsword));
 }
 
     @Override

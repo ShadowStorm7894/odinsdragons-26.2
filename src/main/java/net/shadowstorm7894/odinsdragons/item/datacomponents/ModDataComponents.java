@@ -35,18 +35,6 @@ public class ModDataComponents {
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> FUEL = DATA_COMPONENTS.registerComponentType("fuel",
             builder -> builder.persistent(Codec.INT).networkSynchronized(ByteBufCodecs.INT)
     );
-    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Boolean>> LIT_ANI_0 = DATA_COMPONENTS.registerComponentType("lit_ani_0",
-            builder -> builder.persistent(Codec.BOOL).networkSynchronized(ByteBufCodecs.BOOL)
-    );
-    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Boolean>> LIT_ANI_1 = DATA_COMPONENTS.registerComponentType("lit_ani_1",
-            builder -> builder.persistent(Codec.BOOL).networkSynchronized(ByteBufCodecs.BOOL)
-    );
-    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Boolean>> LIT_ANI_2 = DATA_COMPONENTS.registerComponentType("lit_ani_2",
-            builder -> builder.persistent(Codec.BOOL).networkSynchronized(ByteBufCodecs.BOOL)
-    );
-    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Boolean>> LIT_ANI_3 = DATA_COMPONENTS.registerComponentType("lit_ani_3",
-            builder -> builder.persistent(Codec.BOOL).networkSynchronized(ByteBufCodecs.BOOL)
-    );
 
 
     public static void register(IEventBus eventBus){

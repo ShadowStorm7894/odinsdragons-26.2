@@ -4,10 +4,8 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.util.Unit;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.equipment.Equippable;
-import net.neoforged.neoforge.registries.DeferredRegister;
-import net.shadowstorm7894.odinsdragons.item.ModArmourMaterials;
+import net.shadowstorm7894.odinsdragons.item.armour.ModArmourMaterials;
 
 public class FlightSuitItem extends Item {
 
