@@ -8,7 +8,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.shadowstorm7894.odinsdragons.OdinsDragons;
 import net.shadowstorm7894.odinsdragons.item.customitems.FireSwordItem;
-import net.shadowstorm7894.odinsdragons.item.customitems.FlightSuitItem;
+import net.shadowstorm7894.odinsdragons.item.customitems.GliderItem;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(OdinsDragons.MOD_ID);
@@ -24,7 +24,7 @@ public class ModItems {
                     .durability(4800))
     );
     public static final DeferredItem<Item> WING_SUIT = ITEMS.register("wing_suit",
-            registername -> new FlightSuitItem(new Item.Properties()
+            registername -> new GliderItem(new Item.Properties()
                     .setId(ResourceKey.create(Registries.ITEM, registername))
                     )
     );

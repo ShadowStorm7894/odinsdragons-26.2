@@ -20,7 +20,6 @@ import net.shadowstorm7894.odinsdragons.item.datacomponents.ModDataComponents;
 public class OdinsDragons {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "odinsdragons";
-    // Directly reference a slf4j logger
 
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
